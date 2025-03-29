@@ -108,39 +108,59 @@ Only one digit is activated at a time, but since it happens very fast, it looks 
 Instead of directly connecting each display's seven segments (A-G) to the Arduino, we share segment pins across all displays and use digit control pins to switch between them rapidly. This creates an illusion of a continuous display due to persistence of vision.
 
 
-⚡️ Circuit Connections
-1️⃣ Common Segment Connections (Shared Across Displays)
-Each segment pin (A-G) is connected to the same Arduino pins:
+## ⚡️ **Circuit Connections**
 
-Segment	All Displays Connected to	Arduino Pin
-A	All Displays - Pin A	2
-B	All Displays - Pin B	3
-C	All Displays - Pin C	4
-D	All Displays - Pin D	5
-E	All Displays - Pin E	6
-F	All Displays - Pin F	7
-G	All Displays - Pin G	8
-2️⃣ Digit Control Pins (For Each Display)
-Each individual display has a separate control pin to turn it ON/OFF.
+---
 
-Display (Digit Position)	Arduino Pin
-Digit 1 (Hours Tens)	9
-Digit 2 (Hours Units)	10
-Digit 3 (Minutes Tens)	11
-Digit 4 (Minutes Units)	12
-Digit 5 (Seconds Tens)	A0
-Digit 6 (Seconds Units)	A1
-🔥 Common Cathode vs. Common Anode Displays
-🔹 Common Cathode Displays: Connect digit control pins to LOW to activate the display.
+### 1️⃣ **Common Segment Connections (Shared Across Displays)**  
 
-🔹 Common Anode Displays: Connect digit control pins to HIGH to activate the display.
+Each segment pin (A-G) is connected to the same Arduino pins:  
 
-🛠️ Wiring Overview
-VCC to Arduino 5V
+| **Segment** | **All Displays Connected to** | **Arduino Pin** |
+|-------------|------------------------------|-----------------|
+| A           | All Displays - Pin A          | 2               |
+| B           | All Displays - Pin B          | 3               |
+| C           | All Displays - Pin C          | 4               |
+| D           | All Displays - Pin D          | 5               |
+| E           | All Displays - Pin E          | 6               |
+| F           | All Displays - Pin F          | 7               |
+| G           | All Displays - Pin G          | 8               |
 
-GND to Arduino Ground
+---
 
-Resistors (220Ω - 1kΩ) should be used to limit current to the segments.
+### 2️⃣ **Digit Control Pins (For Each Display)**  
+
+Each individual display has a separate control pin to turn it **ON/OFF**.  
+
+| **Display (Digit Position)** | **Arduino Pin** |
+|------------------------------|-----------------|
+| Digit 1 (Hours Tens)          | 9               |
+| Digit 2 (Hours Units)         | 10              |
+| Digit 3 (Minutes Tens)        | 11              |
+| Digit 4 (Minutes Units)       | 12              |
+| Digit 5 (Seconds Tens)        | A0              |
+| Digit 6 (Seconds Units)       | A1              |
+
+---
+
+## 🔥 **Common Cathode vs. Common Anode Displays**  
+
+| **Display Type**       | **Activation Logic**                |
+|------------------------|-------------------------------------|
+| 🔹 Common Cathode       | Connect digit control pins to `LOW` to activate. |
+| 🔹 Common Anode         | Connect digit control pins to `HIGH` to activate. |
+
+---
+
+## 🛠️ **Wiring Overview**  
+
+| **Connection**         | **Arduino Pin**         |
+|------------------------|-------------------------|
+| VCC                    | 5V                      |
+| GND                    | Ground                  |
+| Resistors (220Ω - 1kΩ)  | To limit current to segments |
+
+
 
 
 
