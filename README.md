@@ -107,9 +107,10 @@ Only one digit is activated at a time, but since it happens very fast, it looks 
 🛠 How Multiplexing Works
 Instead of directly connecting each display's seven segments (A-G) to the Arduino, we share segment pins across all displays and use digit control pins to switch between them rapidly. This creates an illusion of a continuous display due to persistence of vision.
 
-⚡ Wiring for Multiplexing
+
+⚡️ Circuit Connections
 1️⃣ Common Segment Connections (Shared Across Displays)
-Each segment pin (A-G) of all six displays is connected together and controlled by the same Arduino pins.
+Each segment pin (A-G) is connected to the same Arduino pins:
 
 Segment	All Displays Connected to	Arduino Pin
 A	All Displays - Pin A	2
@@ -120,7 +121,7 @@ E	All Displays - Pin E	6
 F	All Displays - Pin F	7
 G	All Displays - Pin G	8
 2️⃣ Digit Control Pins (For Each Display)
-Each individual display has a separate control pin to turn it on or off.
+Each individual display has a separate control pin to turn it ON/OFF.
 
 Display (Digit Position)	Arduino Pin
 Digit 1 (Hours Tens)	9
@@ -129,8 +130,17 @@ Digit 3 (Minutes Tens)	11
 Digit 4 (Minutes Units)	12
 Digit 5 (Seconds Tens)	A0
 Digit 6 (Seconds Units)	A1
-🔹 Common Cathode Displays: Connect digit control pins to LOW to activate.
-🔹 Common Anode Displays: Connect digit control pins to HIGH to activate.
+🔥 Common Cathode vs. Common Anode Displays
+🔹 Common Cathode Displays: Connect digit control pins to LOW to activate the display.
+
+🔹 Common Anode Displays: Connect digit control pins to HIGH to activate the display.
+
+🛠️ Wiring Overview
+VCC to Arduino 5V
+
+GND to Arduino Ground
+
+Resistors (220Ω - 1kΩ) should be used to limit current to the segments.
 
 
 
