@@ -1,5 +1,4 @@
-![image](https://github.com/user-attachments/assets/77fdc5cf-2321-4fd8-8eee-c1660bd9316d)6-Digit 7-Segment Display Clock Using Arduino
-This project is a digital clock built using an Arduino microcontroller and a 6-digit 7-segment display to show the time in HH:MM:SS format. The clock keeps track of time using the Arduino’s built-in millis() function, making it a simple and cost-effective solution without the need for an RTC module. Users can manually set the time using push buttons, and the display brightness can be adjusted as needed.
+6-Digit 7-Segment Display Clock Using Arduino This project is a digital clock built using an Arduino microcontroller and a 6-digit 7-segment display to show the time in HH:MM:SS format. The clock keeps track of time using the Arduino’s built-in millis() function, making it a simple and cost-effective solution without the need for an RTC module. Users can manually set the time using push buttons, and the display brightness can be adjusted as needed.
 
 🎯 Features
 ✅ Displays time in HH:MM:SS format
