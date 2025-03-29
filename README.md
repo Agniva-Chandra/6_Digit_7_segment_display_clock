@@ -49,12 +49,12 @@ Display control: Updates digits on the 7-segment display.
 ## ⚡️full Circuit digram is given bellow 
 
 
-![image](https://github.com/user-attachments/assets/03ed8b69-f0cf-45e6-92c6-1638cdd7a89e)
+
 
 
 🔢 How a 7-Segment Display Works
 A 7-segment display is an electronic display device that shows decimal numbers (0-9) and some letters. It consists of seven LEDs (segments) arranged in a rectangular shape, plus an optional dot (DP) for decimal points.
-
+![image](https://github.com/user-attachments/assets/03ed8b69-f0cf-45e6-92c6-1638cdd7a89e)
 ⚙️ Basic Structure
 A 7-segment display has seven LEDs labeled as:
 
@@ -89,12 +89,13 @@ Number	Segments to Turn ON
 9	a, b, c, d, f, g
 For example, to display "3", turn ON a, b, g, c, d.
 
-![image](https://github.com/user-attachments/assets/512346af-a9f1-4c0e-ba5d-7101b781c6cb)
 
 
 
 🏗 How Multiplexing Works
 Multiplexing allows multiple 7-segment displays to share the same segment pins, reducing the number of required pins.
+
+![image](https://github.com/user-attachments/assets/512346af-a9f1-4c0e-ba5d-7101b781c6cb)
 
 All segment pins (a-g) are connected together.
 
