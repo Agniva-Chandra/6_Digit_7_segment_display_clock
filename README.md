@@ -259,7 +259,6 @@ If delay is too high, flickering occurs.
 
 If current is not controlled, segments can get damaged.
 
-Would you like a corrected version of the previous circuit diagram or more details? 😊
 
 
 
@@ -278,10 +277,9 @@ Here’s a **materials chart** for your **6-digit 7-segment display clock** proj
 | **Power Supply** | 1 | USB cable or battery pack |
 | **LED (optional)** | 1 | To indicate active mode |
 
-This should be clear and easy to follow for your GitHub README. Let me know if you need adjustments! 🚀😊
 
 
-Here’s a detailed **circuit connection guide** for your **6-digit 7-segment display clock** project, formatted for GitHub:  
+Here’s a detailed **circuit connection guide** for your **6-digit 7-segment display clock** project
 
 ---
 
