@@ -1,4 +1,4 @@
-6-Digit 7-Segment Display Clock Using Arduino
+![image](https://github.com/user-attachments/assets/77fdc5cf-2321-4fd8-8eee-c1660bd9316d)6-Digit 7-Segment Display Clock Using Arduino
 This project is a digital clock built using an Arduino microcontroller and a 6-digit 7-segment display to show the time in HH:MM:SS format. The clock keeps track of time using the Arduino’s built-in millis() function, making it a simple and cost-effective solution without the need for an RTC module. Users can manually set the time using push buttons, and the display brightness can be adjusted as needed.
 
 🎯 Features
@@ -44,7 +44,13 @@ Display control: Updates digits on the 7-segment display.
 ✨ Implement an NTP (Network Time Protocol) sync for automatic time updates.
 ✨ Add an alarm feature with a buzzer for alerts.
 
-This version keeps it general for any 6-digit 7-segment display. Does this fit your project now? 😎👍
+## ⚡️ Circuit diagram
+![image](https://github.com/user-attachments/assets/3cd3800e-808b-4fc8-b14f-a575f73565b4)
+## ⚡️full Circuit digram is given bellow 
+
+
+![image](https://github.com/user-attachments/assets/03ed8b69-f0cf-45e6-92c6-1638cdd7a89e)
+
 
 🔢 How a 7-Segment Display Works
 A 7-segment display is an electronic display device that shows decimal numbers (0-9) and some letters. It consists of seven LEDs (segments) arranged in a rectangular shape, plus an optional dot (DP) for decimal points.
@@ -82,6 +88,8 @@ Number	Segments to Turn ON
 8	a, b, c, d, e, f, g
 9	a, b, c, d, f, g
 For example, to display "3", turn ON a, b, g, c, d.
+
+![image](https://github.com/user-attachments/assets/512346af-a9f1-4c0e-ba5d-7101b781c6cb)
 
 
 
@@ -215,6 +223,14 @@ Here’s a detailed **circuit connection guide** for your **6-digit 7-segment di
 
 ---
 
+## ⚡️ Circuit diagram 
+![image](https://github.com/user-attachments/assets/6d403044-f15c-4d9f-a8bb-b9a061bcd33c)
+![image](https://github.com/user-attachments/assets/d3cf7500-d7ff-44f7-8a0e-6a807aaf9c77)
+
+
+
+
+
 ## ⚡️ Circuit Connections  
 
 ### 1️⃣ **7-Segment Display Connections**  
@@ -271,7 +287,7 @@ Connect the buttons with internal pull-up resistors:
 
 ✅ Make sure all connections are double-checked before powering up the project!
 
----
+
 
 This version is **formatted for GitHub** and will appear as a clean, organized table in your `README.md`. Let me know if you’d like a **wiring diagram** or help with anything else! 🔥😊
 
