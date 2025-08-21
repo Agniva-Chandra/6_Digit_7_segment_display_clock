@@ -1,24 +1,24 @@
 6-Digit 7-Segment Display Clock Using Arduino This project is a digital clock built using an Arduino microcontroller and a 6-digit 7-segment display to show the time in HH:MM:SS format. The clock keeps track of time using the Arduino’s built-in millis() function, making it a simple and cost-effective solution without the need for an RTC module. Users can manually set the time using push buttons, and the display brightness can be adjusted as needed.
 
-🎯 Features
+##🎯 Features
 ✅ Displays time in HH:MM:SS format
 ✅ Supports 12-hour / 24-hour mode
 ✅ Keeps time using Arduino’s millis() function
 ✅ Button-based time adjustment for hours and minutes
 ✅ Adjustable brightness for different lighting conditions
 
-🛠️ Components Required
+##🛠️ Components Required
 Arduino: Uno, Nano, or any compatible board
 
-6-Digit 7-Segment Display: Common anode or cathode
+#6-Digit 7-Segment Display: Common anode or cathode
 
-Push Buttons: For setting hours and minutes
+#Push Buttons: For setting hours and minutes
 
-Resistors: As needed for button debouncing
+#Resistors: As needed for button debouncing
 
-Power Supply: USB or battery-powered
+#Power Supply: USB or battery-powered
 
-⚙️ How It Works
+##⚙️ How It Works
 The Arduino uses the millis() function to count elapsed time since the clock was powered on.
 
 The time is displayed in HH:MM:SS format on the 7-segment display.
@@ -27,18 +27,18 @@ Push buttons allow the user to adjust hours and minutes.
 
 The display brightness can be adjusted manually or programmed to adapt automatically.
 
-📚 Code Overview
+##📚 Code Overview
 main.ino: Initializes the display and updates the time every second.
 
 Button handling: Detects button presses to set time.
 
 Display control: Updates digits on the 7-segment display.
 
-⚡️ Limitations
+##⚡️ Limitations
 ⚠️ Time resets after power loss, requiring manual reconfiguration.
 ⚠️ Slight time drift may occur over long durations due to Arduino’s internal clock.
 
-🚀 Possible Enhancements
+##🚀 Possible Enhancements
 ✨ Add a battery backup to preserve time after power loss.
 ✨ Implement an NTP (Network Time Protocol) sync for automatic time updates.
 ✨ Add an alarm feature with a buzzer for alerts.
@@ -51,10 +51,10 @@ Display control: Updates digits on the 7-segment display.
 
 
 
-🔢 How a 7-Segment Display Works
+##🔢 How a 7-Segment Display Works
 A 7-segment display is an electronic display device that shows decimal numbers (0-9) and some letters. It consists of seven LEDs (segments) arranged in a rectangular shape, plus an optional dot (DP) for decimal points.
 ![image](https://github.com/user-attachments/assets/03ed8b69-f0cf-45e6-92c6-1638cdd7a89e)
-⚙️ Basic Structure
+##⚙️ Basic Structure
 A 7-segment display has seven LEDs labeled as:
 
 
@@ -72,7 +72,7 @@ Common Anode (CA) → All LED anodes (positive) are connected to VCC. You turn O
 
 Most Arduino circuits use Common Cathode (CC).
 
-🔢 How to Display Numbers
+##🔢 How to Display Numbers
 To show a number, turn ON the necessary segments:
 
 Number	Segments to Turn ON
@@ -91,7 +91,7 @@ For example, to display "3", turn ON a, b, g, c, d.
 
 
 
-🏗 How Multiplexing Works
+##🏗 How Multiplexing Works
 Multiplexing allows multiple 7-segment displays to share the same segment pins, reducing the number of required pins.
 
 ![image](https://github.com/user-attachments/assets/512346af-a9f1-4c0e-ba5d-7101b781c6cb)
@@ -103,7 +103,7 @@ Each digit has a control pin (Common Cathode or Common Anode).
 Only one digit is activated at a time, but since it happens very fast, it looks like all digits are ON simultaneously.
 
 
-🔗 Multiplexing 6 Pieces of 7-Segment Displays
+##🔗 Multiplexing 6 Pieces of 7-Segment Displays
 🛠 How Multiplexing Works
 Instead of directly connecting each display's seven segments (A-G) to the Arduino, we share segment pins across all displays and use digit control pins to switch between them rapidly. This creates an illusion of a continuous display due to persistence of vision.
 
@@ -164,7 +164,7 @@ Each individual display has a separate control pin to turn it **ON/OFF**.
 
 
 
-🔄 Multiplexing Process
+##🔄 Multiplexing Process
 Activate first digit, display a number, then turn it off.
 
 Activate second digit, display a number, then turn it off.
@@ -183,7 +183,7 @@ g	8
 Common Cathode (CC)	GND
 For multiple displays, each common cathode is connected to a different control pin (like 9, 10, 11...).
 
-🏁 Summary
+##🏁 Summary
 ✔️ A 7-segment display has 7 LEDs (a-g) and an optional dot (DP).
 ✔️ Common Cathode: Segments turn ON with HIGH (1).
 ✔️ Common Anode: Segments turn ON with LOW (0).
@@ -191,10 +191,10 @@ For multiple displays, each common cathode is connected to a different control p
 
 Want a wiring diagram? Let me know! 🚀
 
-🎯 How 6-Digit 7-Segment Display Multiplexing Works
+##🎯 How 6-Digit 7-Segment Display Multiplexing Works
 Multiplexing is used to control multiple 7-segment displays with fewer I/O pins by switching them on and off very quickly, so it looks like they are all on simultaneously due to persistence of vision.
 
-⚡️ How It Works:
+##⚡️ How It Works:
 Segment Pins Shared Across Displays:
 
 All 6 displays share the same segment pins (a, b, c, d, e, f, g), which reduces the number of required connections.
@@ -221,7 +221,7 @@ Repeat this process for all 6 digits in a loop.
 
 Due to the rapid switching (typically 1000 Hz), human eyes perceive all digits as being displayed simultaneously.
 
-🔢 Example:
+##🔢 Example:
 You want to display 426980:
 
 4 on digit 1
@@ -244,17 +244,17 @@ Turn ON digit2 → Display 2 → Delay → Clear
 
 … (repeat for other digits)
 
-⏱️ Timing (Persistence of Vision)
+##⏱️ Timing (Persistence of Vision)
 Human eyes can perceive changes slower than ~50ms.
 
 Therefore, refreshing each digit at 1-5ms intervals makes it seem like all digits are constantly ON.
 
-📡 Advantages of Multiplexing:
+##📡 Advantages of Multiplexing:
 ✅ Fewer pins required
 ✅ Saves power
 ✅ Simpler wiring
 
-⚠️ Potential Issues:
+##⚠️ Potential Issues:
 If delay is too high, flickering occurs.
 
 If current is not controlled, segments can get damaged.
