@@ -10,13 +10,13 @@
 ## 🛠️ Components Required
 Arduino: Uno, Nano, or any compatible board
 
-# 6-Digit 7-Segment Display: Common anode or cathode
+### 6-Digit 7-Segment Display: Common anode or cathode
 
-# Push Buttons: For setting hours and minutes
+### Push Buttons: For setting hours and minutes
 
-# Resistors: As needed for button debouncing
+### Resistors: As needed for button debouncing
 
-# Power Supply: USB or battery-powered
+### Power Supply: USB or battery-powered
 
 ## ⚙️ How It Works
 The Arduino uses the millis() function to count elapsed time since the clock was powered on.
