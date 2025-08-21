@@ -7,7 +7,7 @@
 ✅ Button-based time adjustment for hours and minutes
 ✅ Adjustable brightness for different lighting conditions
 
-## 🛠️ Components Required
+### 🛠️ Components Required
 Arduino: Uno, Nano, or any compatible board
 
 ### 6-Digit 7-Segment Display: Common anode or cathode
